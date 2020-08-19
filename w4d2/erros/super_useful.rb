@@ -53,6 +53,9 @@ end
 # PHASE 4
 class BestFriend
   def initialize(name, yrs_known, fav_pastime)
+    raise ArgumentError.new("yrs_known should be >= 5") if yrs_known < 5
+    raise ArgumentError.new("name cannot be empty") if name.empty?
+    raise ArgumentError.new("fav_pastime") if fav_pastime <= 0
     @name = name
     @yrs_known = yrs_known
     @fav_pastime = fav_pastime
