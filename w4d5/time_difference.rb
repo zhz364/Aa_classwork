@@ -98,19 +98,12 @@ list = [2, 3, -6, 7, -6, 7]
 # Let's make a better version. Write a new function using O(n) time with O(1) memory. Keep a running tally of the largest sum. To accomplish this efficient space complexity, consider using two variables. One variable should track the largest sum so far and another to track the current sum. We'll leave the rest to you.
 
 def faster_largest_contiguous_subsum(list)
-    # i = 0
-    # j = list.length - 1
+   
     largest_sum = list.first # 7
     curr_sum = list.first # 7
     # list = [2, 3, -6, 7, -6, 7]
     (1...list.length).each do |i|
-        # if curr_sum < 0
-        #    curr_sum = 0
-        # end
-        # curr_sum += list[i]
-        # if curr_sum > largest_sum
-        #     largest_sum = curr_sum
-        # end
+        
         if curr_sum + list[i] > list[i]
             curr_sum += list[i]
         else
@@ -120,16 +113,7 @@ def faster_largest_contiguous_subsum(list)
             largest_sum = curr_sum
         end
     end
-    # i = 0
-    # j = list.length -1
-    # until i == j
-    #     list[i..j].each |ele|
-    #     curr_sum = list[i..j].sum
-    #     if curr_sum > largest_sum
-    #         largest_sum = curr_sum
-    #     end
-    #     i+=1
-    # end
+   
     largest_sum
 end
 
