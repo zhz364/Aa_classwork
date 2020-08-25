@@ -59,43 +59,44 @@ def okay_two_sum?(arr, target)
 end
 
 arr = [0, 1, 5, 7]
-# p okay_two_sum?(arr,12)
-
-# target = 6
-# = 6+0
-# = 5+1
-# = 4+2
-# = 3+3
 
 
-# 1,2,3,4,5,6,7 | 6
-# 1 = mid 
-# 2,3,4 = left
-# 5,6,7 = right
 
 
-# STEP 3
-# Hash map
 def two_sum?(arr, target)
     hash = {}
     arr.each_with_index do |ele, i|
         if hash.has_key?(target - ele)
             return true
-            # return [hash[target - ele], i]
         end
         hash[ele] = 0
-        # hash[ele] = i
-            # result = target - ele
-            # if (result.object_id != ele.object_id) && result + ele == target
-            #     return true
-            # end
+      
     end
     return false
 end
-# hash = {14 = 0, 13 = 0, 9 = 0, 7= 0}
+
 arr = [0, 1, 5, 7, 7,7,7]
-p two_sum?(arr,14)
-# hash = { k=v, k=v, k=v }
-# hash = { 0=x, 1=x, 5=x, 7=x }
-# arr.each do |ele|
-# if hash.has_key?(target - ele)
+# p two_sum?(arr,14)
+
+
+
+
+
+
+# return index pairs
+def two_sum_idx(arr,target)
+    hash = {}
+    ans = []
+    arr.each_with_index do |ele,i|
+        if hash.has_key?(target-ele)
+            ans << [hash[target-ele],i]
+        else
+            hash[ele] = i
+        end
+    end
+    ans
+end
+
+
+arr = [0, 1, 5, 9, 14, 13]
+p two_sum_idx(arr,14)
