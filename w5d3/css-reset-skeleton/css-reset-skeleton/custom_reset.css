@@ -1,0 +1,18 @@
+html, head,title,body,header,img,nav,ul,li,aside,h2,section,p,ol,span,footer,label{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+}
+
+body{
+    line-height: 1.5px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img{
+    width:inherit;
+}
