@@ -1,0 +1,28 @@
+// .navigator {
+//     display: flex;
+// }
+
+.items {
+    display:flex;
+    justify-content: space-evenly;
+    margin: 8px;
+    font-family: arial;
+}
+
+.blank {
+    width: 180px;
+}
+
+.items .link:hover {
+    background: #e2e2e2;
+}
+
+.all {
+    text-decoration: underline;
+    font-size: 10px;
+}
+
+.all:hover{
+    background: #e2e2e2;
+}
+
