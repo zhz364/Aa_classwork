@@ -1,0 +1,54 @@
+/* PHASE 1: Header */
+header {
+    background-color: red;
+    height: 30px;
+}
+
+.aaheader {
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.right-bar{
+    display: flex;
+    height: 30px;
+    position: relative;
+}
+
+.aafriend {
+    border-right: 1px solid #ccc;
+    height: 30px;
+    width: 150px;
+    text-align:center;
+}
+
+.Notifications {
+    border-left: 1px solid #ccc;
+    height: 30px;
+    width: 150px;
+    text-align:center;
+    
+}
+
+.Profile {
+    border-left: 1px solid #ccc;
+    height: 30px;
+    width: 100px;
+    text-align:center;
+}
+.Settings {
+    border-left: 1px solid #ccc;
+    height: 30px;
+    width: 100px;
+    text-align:center;
+}
+
+.titles{
+    color: aliceblue;
+    font-style: normal;
+    text-align:center;
+    font-weight: bold;
+    margin-top: 6px;
+}

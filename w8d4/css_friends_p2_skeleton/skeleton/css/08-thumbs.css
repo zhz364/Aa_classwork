@@ -1,0 +1,24 @@
+/* PHASE 8: Thumbs */
+.grid{
+    position: relative;
+    display: none;
+}
+.grid li{
+    display: block;
+}
+
+
+.row img{
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.thumb {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 50px;
+    background: red;
+    border: 5px solid black;
+}
