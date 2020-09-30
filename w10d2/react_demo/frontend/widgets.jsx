@@ -12,6 +12,9 @@ class Widget extends React.Component{
         return(
             <div>  
                 <Clock />
+                <div>
+                    <Tabs onClick="b"/>
+                </div>
             </div> 
 
         );
