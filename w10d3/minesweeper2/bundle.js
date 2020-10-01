@@ -239,14 +239,28 @@ var Game = /*#__PURE__*/function (_React$Component) {
       this.setState({
         board: this.state.board
       });
-    }
+    } // componentDidUpdate(){
+    //     if (this.state.board.lost()){
+    //         alert("You Lost!")
+    //     } else if (this.state.board.won()){
+    //         alert("You Won!")
+    //     }
+    // }
+
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_board__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        board: this.state.board,
-        updateGame: this.updateGame
-      });
+      // debugger
+      if (this.state.board.lost()) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "You Lost!");
+      } else if (this.state.board.won()) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "You Won!");
+      } else {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_board__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          board: this.state.board,
+          updateGame: this.updateGame
+        });
+      }
     }
   }]);
 
@@ -326,16 +340,16 @@ var Tile = /*#__PURE__*/function (_React$Component) {
       var className = "";
 
       if (this.props.tile.bombed) {
-        mark = "B";
+        mark = "";
         className = "bombed";
       } else if (this.props.tile.explored) {
-        mark = "E";
+        mark = "".concat(this.props.tile.adjacentBombCount());
         className = "explored";
       } else if (this.props.tile.flagged) {
         mark = "F";
         className = "flagged";
       } else {
-        mark = "T";
+        mark = "";
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

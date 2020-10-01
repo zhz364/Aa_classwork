@@ -17,8 +17,23 @@ class Game extends React.Component{
         }
         this.setState({ board: this.state.board })
     }
+ 
+    // componentDidUpdate(){
+    //     if (this.state.board.lost()){
+    //         alert("You Lost!")
+    //     } else if (this.state.board.won()){
+    //         alert("You Won!")
+    //     }
+    // }
     render(){
+        // debugger
+        if (this.state.board.lost()){
+            return <div>You Lost!</div>
+        } else if (this.state.board.won()){
+            return <div>You Won!</div>
+        } else {
         return <Board board={this.state.board} updateGame = {this.updateGame}/>
+        }
     }
 }
 

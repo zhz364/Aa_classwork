@@ -17,16 +17,16 @@ class Tile extends React.Component {
         let mark = ""
         let className = ""
         if(this.props.tile.bombed){
-            mark = "B";
+            mark = "";
             className = "bombed"
         } else if (this.props.tile.explored){
-            mark = "E";
+            mark = `${this.props.tile.adjacentBombCount()}`;
             className = "explored"
         } else if (this.props.tile.flagged){
             mark = "F"
             className = "flagged"
         } else{
-            mark = "T"
+            mark = ""
         }
         return (<div  className={`tile ${className}`} 
         onClick={this.handleClick} > 
